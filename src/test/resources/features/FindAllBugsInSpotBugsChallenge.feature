@@ -1,6 +1,8 @@
-# Note: All scenarios here currently fail to highlight known bugs.
+# NOTE: This is to find all bugs in CHALLENGE - Spot the BUGS! page in the requirement
+# All scenarios here currently fail to highlight known bugs.
 # Each failed scenario will need to raised a ticket for developers to fix.
 # Once the bugs are fixed, all scenarios will pass.
+# I have found 23 bugs in total (23 bugs are covered by automation and the remaining 2 bugs are left for manual testing)
 #
 ################### Bugs founds covered by automation ############################
 # Known bug 1: Phone number label is wrong (Screen says: Phone nunber*)

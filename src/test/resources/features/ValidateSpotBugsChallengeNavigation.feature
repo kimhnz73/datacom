@@ -1,3 +1,4 @@
+# NOTE: This is to validate that the controls (i.e. navigation) works in CHALLENGE - Spot the BUGS! page in the requirement
 Feature: Validate all hyperlinks in the CHALLENGE - Spot the BUGS! page
     Background:
         Given I navigate to QA main page
