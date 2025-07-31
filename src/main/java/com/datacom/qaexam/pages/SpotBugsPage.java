@@ -8,14 +8,6 @@ public class SpotBugsPage extends BasePage{
         super(page);
     }
 
-    public void openPage() {
-        page.navigate("https://qa-practice.netlify.app");
-    }
-
-    public void navigateToSpotTheBugsChallenge() {
-        page.click("#bugs-form");
-    }
-
     public void clickHomeLink() {
         page.click("//a[@id='home' and text()='Home']");
     }

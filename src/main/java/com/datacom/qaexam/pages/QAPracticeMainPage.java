@@ -1,5 +1,6 @@
 package com.datacom.qaexam.pages;
 
+import com.datacom.qaexam.configloader.AppConfig;
 import com.microsoft.playwright.Page;
 
 public class QAPracticeMainPage extends BasePage{
@@ -8,7 +9,7 @@ public class QAPracticeMainPage extends BasePage{
     }
 
     public void openPage() {
-        page.navigate("https://qa-practice.netlify.app");
+        page.navigate(AppConfig.getInstance().getHomePageUrl());
     }
 
     public SpotBugsPage navigateToSpotTheBugsChallenge() {
