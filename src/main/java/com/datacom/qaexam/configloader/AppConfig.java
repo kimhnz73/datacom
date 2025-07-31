@@ -4,6 +4,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * A singleton class to provide access to application configuration via the property file "appConfig.properties" located under the project root.
+ */
 public class AppConfig {
     public static final String APP_CONFIG_PROPERTIES = "appConfig.properties";
     public static final String HOME_PAGE_URL = "homePageUrl";
@@ -16,10 +19,14 @@ public class AppConfig {
     private String browser;
     private int timeoutInMillSeconds;
 
+    // Intentionally make it private so that no can instantiate AppConfig explicitly
     private AppConfig(){
         // private default constructor to support a singleton pattern
     }
 
+    /**
+     * Get a new AppConfig instance.
+     */
     public static AppConfig getInstance() {
         if (appConfig == null) {
             // Load configuration file only once

@@ -5,6 +5,10 @@ import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
+/**
+ * This is a test context that contains access to Playwright objects including Playwright, Browser, BrowserContext and Page.
+ * Note that this will be initialised by CucumberHook.
+ */
 public class TestContext {
     private Playwright playwright;
     private Browser browser;

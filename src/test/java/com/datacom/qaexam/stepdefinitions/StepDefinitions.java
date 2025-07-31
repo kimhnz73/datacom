@@ -11,6 +11,9 @@ import org.junit.jupiter.api.Assertions;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
+/**
+ * Cucumber step definitions.
+ */
 public class StepDefinitions {
     private Page playWrightPage;
 

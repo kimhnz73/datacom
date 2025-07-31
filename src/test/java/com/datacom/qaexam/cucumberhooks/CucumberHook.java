@@ -6,8 +6,12 @@ import com.microsoft.playwright.*;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
-import java.awt.*;
+import java.awt.Toolkit;
+import java.awt.Dimension;
 
+/**
+ * This is a cucumber hook to get called before and after running each scenario
+ */
 public class CucumberHook {
     private TestContext testContext;
 
