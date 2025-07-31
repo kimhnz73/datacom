@@ -1,6 +1,7 @@
 package com.datacom.qaexam.pages;
 
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.SelectOption;
 
 public class SpotBugsPage extends BasePage{
     public SpotBugsPage(Page page) {
@@ -35,6 +36,14 @@ public class SpotBugsPage extends BasePage{
         page.fill("input#phone", phoneNumber);
     }
 
+    public void selectCountry(String country) {
+        page.selectOption("select#countries_dropdown_menu", new SelectOption().setLabel(country));
+    }
+
+    public void clearCountry() {
+        page.selectOption("select#countries_dropdown_menu", new SelectOption().setLabel("Select a country..."));
+    }
+
     public void enterFirstName(String firstName) {
         page.fill("input#firstName", firstName);
     }
@@ -43,5 +52,13 @@ public class SpotBugsPage extends BasePage{
         page.fill("input#lastName", lastName);
     }
 
+    public void enterEmailAddress(String emailAddress) {
+        page.fill("input#emailAddress", emailAddress);
+    }
+
+
+    public void enterPassword(String password) {
+        page.fill("input#password", password);
+    }
 
 }

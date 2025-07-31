@@ -43,6 +43,13 @@ public class StepDefinitions {
                 + text + ". Xpath used: " + xpath);
     }
 
+    @Then("I do not expect page to contain text {string}")
+    public void pageTextNotContains(String text){
+        String xpath = "//*[contains(text(), '" + text + "')]";
+        Assertions.assertFalse(playWrightPage.locator(xpath).innerText().contains(text), "Found an element with the given text which is not expected "
+                + text + ". Xpath used: " + xpath);
+    }
+
     @Then("I expect menu to be hidden")
     public void expectMenuToBeHidden(){
         String css = "nav#sidebar.active";
@@ -119,6 +126,16 @@ public class StepDefinitions {
         spotBugsPage.enterPhoneNumber(phoneNumber);
     }
 
+    @Given("I select country {string}")
+    public void selectCountry(String country){
+        spotBugsPage.selectCountry(country);
+    }
+
+    @Given("I clear country")
+    public void clearCountry(){
+        spotBugsPage.clearCountry();
+    }
+
     @Given("I enter first name {string}")
     public void enterFirstName(String firstName){
         spotBugsPage.enterFirstName(firstName);
@@ -129,4 +146,13 @@ public class StepDefinitions {
         spotBugsPage.enterLastName(lastName);
     }
 
+    @Given("I enter email address {string}")
+    public void enterEmailAddress(String emailAddress){
+        spotBugsPage.enterEmailAddress(emailAddress);
+    }
+
+    @Given("I enter password {string}")
+    public void enterPassword(String password){
+        spotBugsPage.enterPassword(password);
+    }
 }
