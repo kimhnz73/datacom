@@ -1,17 +1,18 @@
 package com.datacom.qaexam.pages;
 
-import com.datacom.qaexam.context.TestContext;
+import com.microsoft.playwright.Page;
 
 public class QAPracticeMainPage extends BasePage{
-    public QAPracticeMainPage(TestContext textContext) {
-        super(textContext);
+    public QAPracticeMainPage(Page page) {
+        super(page);
     }
 
     public void openPage() {
-        testContext.getPage().navigate("https://qa-practice.netlify.app");
+        page.navigate("https://qa-practice.netlify.app");
     }
 
-    public void navigateToSpotTheBugsChallenge() {
-        testContext.getPage().click("#bugs-form");
+    public SpotBugsPage navigateToSpotTheBugsChallenge() {
+        page.click("#bugs-form");
+        return new SpotBugsPage(page);
     }
 }

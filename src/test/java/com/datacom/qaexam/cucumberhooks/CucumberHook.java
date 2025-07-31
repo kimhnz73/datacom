@@ -21,6 +21,17 @@ public class CucumberHook {
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
         testContext.setBrowserContext(testContext.getBrowser().newContext(new Browser.NewContextOptions().setViewportSize((int)dimension.getWidth(), (int)dimension.getHeight())));
         testContext.setPage(testContext.getBrowserContext().newPage());
+
+        // TODO remove this code
+        // TODO remove this code
+        // TODO remove this code
+        // TODO remove this code
+        // TODO remove this code
+        // TODO remove this code
+        // TODO remove this code
+        // TODO remove this code
+        testContext.getPage().setDefaultTimeout(5000);
+
     }
 
     @After

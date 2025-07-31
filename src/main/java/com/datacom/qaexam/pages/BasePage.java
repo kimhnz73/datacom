@@ -1,11 +1,14 @@
 package com.datacom.qaexam.pages;
 
-import com.datacom.qaexam.context.TestContext;
+import com.microsoft.playwright.Page;
 
 public abstract class BasePage {
-    protected TestContext testContext;
+    protected Page page;
 
-    public BasePage(TestContext testContext) {
-        this.testContext = testContext;
+    public BasePage(Page page) {
+        if (page == null) {
+            throw new IllegalArgumentException("page must be specified");
+        }
+        this.page = page;
     }
 }
