@@ -28,6 +28,7 @@ public class StepDefinitions {
     public void navigateToQAMainPage(){
         qaPracticePage = new QAPracticeMainPage(playWrightPage);
         qaPracticePage.openPage();
+        // To validate page loading successfully
         assertThat(playWrightPage).hasTitle("QA Practice | Learn with RV");
     }
 
