@@ -7,7 +7,6 @@ import com.microsoft.playwright.options.SelectOption;
  * This is a page for CHALLENGE - Spot the BUGS!
  */
 public class SpotBugsPage extends BasePage{
-
     private static final String A_ID_HOME_AND_TEXT_HOME = "//a[@id='home' and text()='Home']";
     private static final String A_ID_HOME_AND_TEXT_CONTACT = "//a[@id='home' and text()='Contact']";
     private static final String BUTTON_SIDEBAR_COLLAPSE = "button#sidebarCollapse";

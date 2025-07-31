@@ -8,11 +8,11 @@ import java.util.Properties;
  * A singleton class to provide access to application configuration via the property file "appConfig.properties" located under the project root.
  */
 public class AppConfig {
-    public static final String APP_CONFIG_PROPERTIES = "appConfig.properties";
-    public static final String HOME_PAGE_URL = "homePageUrl";
-    public static final String HEADLESS = "headless";
-    public static final String BROWSER = "browser";
-    public static final String TIMEOUT_IN_MILL_SECONDS = "timeoutInMillSeconds";
+    private static final String APP_CONFIG_PROPERTIES = "appConfig.properties";
+    private static final String HOME_PAGE_URL = "homePageUrl";
+    private static final String HEADLESS = "headless";
+    private static final String BROWSER = "browser";
+    private static final String TIMEOUT_IN_MILL_SECONDS = "timeoutInMillSeconds";
     private static AppConfig appConfig;
     private String homePageUrl;
     private boolean headless;
